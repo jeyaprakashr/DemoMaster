@@ -1,0 +1,108 @@
+﻿@model DemoMaster.Models.CustomerMaster
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.js"></script>
+
+<script src="~/Scripts/DemoScript/AddCustomer.js"></script>
+<script src="~/Scripts/DemoScript/js.cookie.js"></script>
+<h2>Index</h2>
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<button type="button" onclick='onBtnClick()'>Click</button>
+<span id="message"></span>
+<input id="txttrest" type="text" onkeydown="keyDown(event)">
+<ul id="fruitList">
+    <li>Apple</li>
+    <li>Orange</li>
+    <li>Grapes</li>
+</ul>
+<div class="form-group">
+    <label>CustomerCode </label><input id="txtCustomerCode" type="text">
+    <br />
+    <label>CompanyCode</label><input id="txtCompanyCode" type="text">
+    <br />
+    <label>CompanyName</label><input id="txtCompanyName" type="text">
+    <br />
+    <label>Address1</label><input id="txtAddress1" type="text">
+    <br />
+    <label>Address2</label><input id="txtAddress2" type="text">
+    <br />
+    <label>City</label><input id="txtCity" type="text">
+    <br />
+    <label>StateCode</label><input id="txtStateCode" type="text">
+    <br />
+    <label>CountryCode</label><input id="txtCountryCode" type="text">
+    <br />
+    <label>ZipCode</label><input id="txtZipCode" type="text">
+    <br />
+    <label>Phone</label><input id="txtPhone" type="text">
+    <br />
+    <label>Fax</label><input id="txtFax" type="text">
+    <br />
+    <label>Email</label><input id="txtEmail" type="text">
+    <br />
+    <label>InActive</label><input id="txtInActive" type="text">
+    <br />
+    <label>CreatedDate</label><input id="txtCreatedDate" type="text">
+    <br />
+    <button id="btnFormSubmit">Submit</button>
+
+    <br />
+</div>
+
+    <table id="tblEmp">
+        <thead>
+            <tr>
+                <th>CustomerCode</th>
+                <th>CompanyCode</th>
+                <th>CompanyName</th>
+                <th>Address1</th>
+                <th>Address2</th>
+                <th>City</th>
+                <th>StateCode</th>
+                <th>CountryCode</th>
+                <th>ZipCode</th>
+                <th>Phone</th>
+                <th>Fax</th>
+                <th>Email</th>
+                <th>InActive</th>
+                <th>CreatedDate</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <style type="text/css">
+        form {
+            margin: 20px 0;
+        }
+
+            form input, button {
+                padding: 5px;
+            }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }   
+
+        table, th, td {
+            border: 1px solid #cdcdcd;
+        }
+
+            table th, table td {
+                padding: 10px;
+                text-align: left;
+            }
+
+        .txtstyle {
+            background-color: aqua;
+        }
+    </style>

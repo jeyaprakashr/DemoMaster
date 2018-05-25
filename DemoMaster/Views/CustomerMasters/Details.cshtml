@@ -1,0 +1,603 @@
+﻿@model DemoMaster.Models.CustomerMaster
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomerMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.TitleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TitleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>*@
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.AccountCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerTypeCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerTypeCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentTermsCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentTermsCode)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountryCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZipCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.WebSite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebSite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditCardNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditCardNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpiryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpiryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Taxable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Taxable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipToAddress1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipToAddress1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipToAddress2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipToAddress2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipToCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipToCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipToStateCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipToStateCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipToCountryCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipToCountryCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipToZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipToZipCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BalanceAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BalanceAmount)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InActive)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.CreatedUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUser)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.ModifiedUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OPENBAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OPENBAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EXCHANGERATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EXCHANGERATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAMILYCODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAMILYCODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedInFinacs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedInFinacs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpGroupId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpGroupId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccountNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankAccountNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PayCycle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PayCycle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfDependents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfDependents)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfJoin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfJoin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Released)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Released)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleasedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleasedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleasedRemarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleasedRemarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APAccount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APAccount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField7)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField7)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField8)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField8)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField9)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField9)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField10)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField10)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField11)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField11)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField12)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField12)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField13)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField13)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField14)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField14)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomField15)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomField15)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactPersonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactPersonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactGUID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactGUID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APFamilyCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APFamilyCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusID)
+        </dd>*@
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

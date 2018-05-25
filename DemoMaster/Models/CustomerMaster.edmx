@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FMSARABICModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CustomerMaster">
+          <Key>
+            <PropertyRef Name="CustomerCode" />
+            <PropertyRef Name="CompanyCode" />
+          </Key>
+          <Property Name="CustomerCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CompanyCode" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="300" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="StateCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="CountryCode" Type="nvarchar" MaxLength="3" />
+          <Property Name="ZipCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="InActive" Type="varchar" MaxLength="1" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <Function Name="stpMAS_GetGuardianRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="COMPANYCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="CUSTOMERCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="RECORDCOUNT" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="stpMAS_SaveCustomerRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NEWCUSTOMERCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="OPENBAL" Type="numeric" Mode="In" />
+          <Parameter Name="EXCHANGERATE" Type="numeric" Mode="In" />
+          <Parameter Name="FAMILYCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="STUDENTGRADE" Type="nvarchar" Mode="In" />
+          <Parameter Name="GRADEINDEX" Type="nvarchar" Mode="In" />
+          <Parameter Name="DOB" Type="datetime" Mode="In" />
+          <Parameter Name="LANGUAGECODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="LANGUAGENAME" Type="nvarchar" Mode="In" />
+          <Parameter Name="ENTRYDATE" Type="datetime" Mode="In" />
+          <Parameter Name="WITHDRAWALDATE" Type="datetime" Mode="In" />
+          <Parameter Name="GENDERCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="GENDERDESCR" Type="nvarchar" Mode="In" />
+          <Parameter Name="PARENTGUARDIAN" Type="nvarchar" Mode="In" />
+          <Parameter Name="CreatedInFinacs" Type="char" Mode="In" />
+          <Parameter Name="ContactPersonName" Type="nvarchar" Mode="In" />
+          <Parameter Name="CUSTOMERCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="COMPANYCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="COMPANYNAME" Type="nvarchar" Mode="In" />
+          <Parameter Name="TITLENAME" Type="nvarchar" Mode="In" />
+          <Parameter Name="FIRSTNAME" Type="nvarchar" Mode="In" />
+          <Parameter Name="MIDDLENAME" Type="nvarchar" Mode="In" />
+          <Parameter Name="LASTNAME" Type="nvarchar" Mode="In" />
+          <Parameter Name="ACCOUNTCODE" Type="numeric" Mode="In" />
+          <Parameter Name="CUSTOMERTYPECODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="PAYMENTTERMSCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="ADDRESS1" Type="nvarchar" Mode="In" />
+          <Parameter Name="ADDRESS2" Type="nvarchar" Mode="In" />
+          <Parameter Name="CITY" Type="nvarchar" Mode="In" />
+          <Parameter Name="STATECODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="COUNTRYCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="ZIPCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="PHONE" Type="nvarchar" Mode="In" />
+          <Parameter Name="FAX" Type="nvarchar" Mode="In" />
+          <Parameter Name="EMAIL" Type="nvarchar" Mode="In" />
+          <Parameter Name="WEBSITE" Type="nvarchar" Mode="In" />
+          <Parameter Name="CREDITCARDNO" Type="nvarchar" Mode="In" />
+          <Parameter Name="EXPIRYDATE" Type="datetime" Mode="In" />
+          <Parameter Name="TAXABLE" Type="varchar" Mode="In" />
+          <Parameter Name="SHIPTOADDRESS1" Type="nvarchar" Mode="In" />
+          <Parameter Name="SHIPTOADDRESS2" Type="nvarchar" Mode="In" />
+          <Parameter Name="SHIPTOCITY" Type="nvarchar" Mode="In" />
+          <Parameter Name="SHIPTOSTATECODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="SHIPTOCOUNTRYCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="SHIPTOZIPCODE" Type="nvarchar" Mode="In" />
+          <Parameter Name="REMARKS" Type="nvarchar" Mode="In" />
+          <Parameter Name="INACTIVE" Type="varchar" Mode="In" />
+          <Parameter Name="MODIFIEDUSER" Type="numeric" Mode="In" />
+          <Parameter Name="MODIFIEDDATE" Type="datetime" Mode="In" />
+          <Parameter Name="NEWRECORD" Type="tinyint" Mode="In" />
+          <Parameter Name="ERRORCODE" Type="int" Mode="InOut" />
+          <Parameter Name="NEWMODIFIEDDATE" Type="datetime" Mode="InOut" />
+          <Parameter Name="RECORDCOUNT" Type="int" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="FMSARABICModelStoreContainer">
+          <EntitySet Name="CustomerMaster" EntityType="Self.CustomerMaster" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FMSARABICModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CustomerMaster">
+          <Key>
+            <PropertyRef Name="CustomerCode" />
+            <PropertyRef Name="CompanyCode" />
+          </Key>
+          <Property Name="CustomerCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CompanyCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StateCode" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InActive" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="FMSARABICEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CustomerMaster" EntityType="Self.CustomerMaster" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FMSARABICModelStoreContainer" CdmEntityContainer="FMSARABICEntities2">
+          <EntitySetMapping Name="CustomerMaster">
+            <EntityTypeMapping TypeName="FMSARABICModel.CustomerMaster">
+              <MappingFragment StoreEntitySet="CustomerMaster">
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="InActive" ColumnName="InActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style_5.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/dashboard_style.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body onLoad="buildHtmlTable()">
+    <!--pre loader-->
+    <div class="preloader-background">
+        <div id="loading"></div>
+    </div>
+    <!-- nav-->
+    <div class="row">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <ul class="left">
+                        <li><img src="images/finacs_logo_FA.jpg" alt="" class="circle responsive-img"></li>
+                        <li><h5>FINACS</h5></li>
+                        <!--<li><h5 id="admin">(Financial Accounting for schools)</h5></li>-->
+                    </ul>
+                    <ul class="right hide-on-med-and-down">
+                        <li><i class="material-icons">search</i></li>
+                        <li><i class="material-icons">notifications</i></li>
+                        <li><i class="material-icons">settings</i></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <ul class="menu">
+        <li id="a" class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Favorites">
+                <i class="material-icons">star</i>
+            </a>
+        </li>
+        <li id="b" class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Student Billing"><i class="material-icons">folder_shared</i> <!--Student Billing--></a>
+        </li>
+        <li id="c" class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Account Receivables"><i class="material-icons">account_balance_wallet</i><!--<img src="images/acc_rec_icon.png">--> <!--Account Receivables--></a>
+        </li>
+        <li class="menu-button home">
+            <a href="#!" class=" tooltipped" data-position="right" data-delay="50" data-tooltip="Purchase">
+                <i class="material-icons">shop</i>
+                <!--Purchase-->
+            </a>
+        </li>
+        <li class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Account Payables"><i class="material-icons">payment</i> <!--Account Payables--></a>
+        </li>
+        <li class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="General Ledger">
+                <i class="material-icons">book</i>
+                <!--General Ledger-->
+            </a>
+        </li>
+        <li class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Fixed Assets"><i class="material-icons">assignment</i> <!--Fixed Assets--></a>
+        </li>
+        <li class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Budgeting"><i class="material-icons">account_balance</i><!--Budgeting--></a>
+        </li>
+        <li class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Inventory"><i class="material-icons">list</i> <!--Inventory--></a>
+        </li>
+        <li class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Payroll">
+                <i class="material-icons">attach_money</i>
+                <!--Payroll-->
+            </a>
+        </li>
+        <li class="menu-button home">
+            <a href="#!" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Utilities">
+                <i class="material-icons">settings</i>
+                <!--Utilities-->
+            </a>
+        </li>
+    </ul>
+    <ul class="menu-bar">
+        <!-- <li><a href="#!" class="menu-button">Transactions</a></li>
+         <li><a href="#!">Reports</a></li> -->
+    </ul>
+    <main>
+        <!--search family-->
+
+    </main>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+<!--footer-->
+<footer class="page-footer">
+    <!--floating buttons-->
+    <ul class="button-list">
+        <li><a class="btn-floating  blue"><i class="material-icons">attach_file</i></a></li>
+        <li><a class="btn-floating  pink lighten-2"><i class="material-icons">print</i></a></li>
+        <li><a class="btn-floating yellow darken-1"><i class="material-icons">mail_outline</i></a></li>
+        <li><a class="btn-floating deep-purple lighten-2"><i class="material-icons">create</i></a></li>
+        <li><a class="btn-floating lime accent-4"><i class="material-icons">monetization_on</i></a></li>
+        <li><a class="btn-floating   blue-grey lighten-1 "><i class="material-icons">block</i></a></li>
+        <li><a class="btn-floating  teal "><i class="material-icons">note_add</i></a></li>
+        <li><a id="save" class="btn-floating green" onclick="SaveTable()"><i class="material-icons">save</i></a></li>
+        <li><a id="clear" class="btn-floating orange" onclick="DeleteRows()"><i class="material-icons">clear</i></a></li>
+        <li><a class="btn-floating red"><i class="material-icons">delete</i></a></li>
+    </ul>
+    </div>
+</footer>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script type="text/javascript" src="js/main_JS.js"></script>
+
+
+</html>

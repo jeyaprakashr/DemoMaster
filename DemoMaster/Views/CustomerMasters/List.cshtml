@@ -1,0 +1,28 @@
+﻿@*----------------------------------------------------------------------
+@model IEnumerable<DemoMaster.Models.CustomerMaster>
+
+@{
+    Layout = null;
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_Finacs.cshtml";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="~/Scripts/DemoScript/DemoJS.js"></script>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<button type="button" onclick='onBtnClick()'>Click</button>
+<span id="message"></span>
+<input id="txttrest" type="text" onkeydown="keyDown(event)">
+<label>CustomerCode </label><input id="txtCustomerCode" type="text">
+<button type="button" onclick='onFormSubmit()'>Submit</button>
+
+----------------------------------------------------------------------*@

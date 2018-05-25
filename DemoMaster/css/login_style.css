@@ -1,0 +1,52 @@
+body{
+	background-color: whitesmoke;
+}
+.login_card{
+	margin-top: 100px;
+}
+.card-title {
+	height: 75px;
+	background-color: #065492;
+}
+.card-title img,h4{
+	float: left;
+}
+.card-title img{
+	margin-left: 120px;
+}
+.card-title h4{
+	font-weight: 140;
+	margin-top: 18px;
+}
+.form_group{
+	margin-top: 27px;
+}
+input{
+	color: #5d5d5d;
+}
+.material-icons{
+	color: #5d5d5d;
+}
+#action{
+	color: #065492;
+}
+#action:hover{
+	color: #ff5603;
+}
+.login_select .caret{
+	color: #5d5d5d !important;
+}
+.card-action{
+	background-color: #ffffff!important;
+	text-align: center;
+	margin-left: 21px;
+}
+.card-action a{
+	border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    padding: 5px 18px;
+}
+.card-action a:hover{
+	color: #ff5603;
+}

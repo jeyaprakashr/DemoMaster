@@ -1,0 +1,52 @@
+#info_tile{
+	height:150px;
+	color: #757575;
+	margin-top: 20px;
+	overflow-y: hidden;    /*  Dashboard   */
+    overflow-x: hidden
+}
+
+#info_tile i{
+	font-size: 2.5rem;
+	font-weight: lighter;    /*  Dashboard   */
+	margin-top: 10px;
+	color: #757575;
+}
+.#info_tile p h5{
+	display: inline-block;    /*  Dashboard   */
+}
+.card{
+	/* height: 450px;*/
+	overflow-y: auto;   
+    overflow-x: hidden;
+
+}
+#myChart{
+	
+	
+	/*height: 350px!important;*/
+    margin-bottom: 30px;
+}
+#myChart_bar{
+	
+	
+	/*height: 350px!important;*/
+     margin-bottom: 30px;
+}
+#myChart_pie{
+	
+	
+	width: 80%!important;
+	height: 80%!important;
+     margin-bottom: 70px;
+}
+#myChart_doughnut{
+	
+	width: 80%!important;
+	height: 80%!important;
+     margin-bottom: 70px;
+}
+canvas{
+	display: inline-block;	 /*  Dashboard   */
+	float: 	left;	
+}
